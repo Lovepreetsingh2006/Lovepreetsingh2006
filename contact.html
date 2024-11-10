@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Campus Community</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;  /* Make sure the body takes up the full height */
+            margin: 0;
+            display: flex;
+            flex-direction: column;  /* Stack elements vertically */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9; 
+            background-image: url('hq720.jpg'); 
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat; 
+        }
+
+        header {
+            background-color: orange;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        nav {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            flex: 1;  /* Allow the main content to take up available space */
+            padding: 20px;
+        }
+
+        h2 {
+            color: orange;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .contact-form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form label {
+            color: orange;
+            font-weight: bold;
+        }
+
+        .contact-form input, 
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: orange;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .contact-form button:hover {
+            background-color: darkorange;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: orange;
+            color: white;
+            margin-top: auto; /* Push footer to the bottom */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="htmlproject.html">&larr; Back</a> <!-- Correct link to your main page -->
+        </nav>
+        <h1>Contact Us</h1>
+    </header>
+
+    <main>
+        <h2>We'd Love to Hear From You!</h2>
+        <div class="contact-form">
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Campus Community</p>
+    </footer>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Your message has been sent! Thank you for contacting us.");
+            document.getElementById("contactForm").reset(); // Clear the form after submission
+        });
+    </script>
+</body>
+</html>
