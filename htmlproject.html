@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Community</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9; 
+            background-image: url('hq720.jpg'); 
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: orange;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h2 {
+            color: orange;
+            margin-bottom: 10px;
+        }
+
+        #event-list, #club-list, #chat-box {
+            margin: 20px auto;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.7); 
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(0px);
+        }
+
+        #event-list {
+            margin-bottom: 20px;
+        }
+
+        #club-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        #club-list li {
+            padding: 10px;
+            background-color: #f1f1f1;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        #chat-box {
+            max-width: 100%;
+            margin: 20px auto;
+        }
+
+        #messages {
+            height: 200px;
+            margin-bottom: 10px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        #chat-input {
+            width: 75%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #send-btn {
+            padding: 10px 20px;
+            background-color: orange;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+
+        #send-btn:hover {
+            background-color: darkorange;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: orange;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .club-button {
+            cursor: pointer;
+            padding: 10px;
+            background-color: orange;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-align: left;
+            width: 100%;
+        }
+
+        .club-button:hover {
+            background-color: darkorange;
+        }
+
+        details {
+            margin-bottom: 10px;
+        }
+
+        details p {
+            margin-top: 5px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            nav a {
+                font-size: 0.9rem;
+                margin: 0 10px;
+            }
+
+            #chat-input {
+                width: 70%;
+            }
+
+            .club-button {
+                font-size: 0.9rem;
+            }
+
+            footer {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">            <h1>LPU Campus Community</h1>
+            <nav>
+                <a href="#events">Events</a>
+                <a href="#clubs">Clubs</a>
+                <a href="#chat">Chat Box</a>
+                <a href="contact.html">Contact us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="events">
+            <h2>Events</h2>
+            <div id="event-list">
+                <article> 
+                    <h3>Tech Fest 2024</h3>
+                    <p><strong>Date:</strong> October 15, 2024</p>
+                    <p>Join us for a day of innovation, workshops, and guest speakers from the tech industry. Engage in hands-on sessions and network with fellow tech enthusiasts.</p>
+                </article>
+                <article>
+                    <h3>Music Night</h3>
+                    <p><strong>Date:</strong> November 5, 2024</p>
+                    <p>Experience an evening filled with live performances from local bands and artists. Whether you want to perform or just enjoy the music, everyone is welcome!</p>
+                </article>
+                <article>
+                    <h3>Culinary Challenge</h3>
+                    <p><strong>Date:</strong> December 10, 2024</p>
+                    <p>Put your cooking skills to the test in our exciting culinary competition! Teams will compete to create the best dish using mystery ingredients.</p>
+                </article>
+                <article>
+                    <h3>Book Fair</h3>
+                    <p><strong>Date:</strong> January 20, 2025</p>
+                    <p>Celebrate literature at our annual book fair! Explore stalls from local authors, attend readings, and participate in book signings.</p>
+                </article>
+                <article>
+                    <h3>Hackathon 2024</h3>
+                    <p><strong>Date:</strong> February 18-19, 2025</p>
+                    <p>Join us for a 24-hour coding marathon! Form teams, develop innovative projects, and compete for exciting prizes.</p>
+                </article>
+            </div>
+        </section>
+        
+        <section id="clubs">
+            <h2>Clubs</h2>
+            <ul id="club-list">
+                <li>
+                    <details>
+                        <summary class="club-button">Music Club</summary>
+                        <p>Cooking Club: Welcome to the Cooking Club, where culinary creativity and passion come together! Our club is designed for anyone who loves to cook, whether you’re a novice in the kitchen or an experienced chef. We believe that cooking is not just about preparing meals, but also about sharing culture, traditions, and flavors.
+
+                            Each month, we explore different cuisines and cooking techniques through hands-on workshops and cooking challenges. Members have the opportunity to learn new recipes, experiment with ingredients, and enhance their culinary skills in a fun and supportive environment. We also host themed cooking nights, where everyone brings a dish to share, allowing us to savor a variety of flavors from around the world.
+                            
+                            In addition to cooking, we discuss nutrition, meal planning, and food sustainability, fostering a deeper understanding of our food choices. Join us for outings to local farmers' markets, cooking classes, and food festivals, as we celebrate our love for food and the joy of cooking together. Whether you're looking to refine your skills or simply enjoy good food and company, the Cooking Club is the perfect place for you!</p>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary class="club-button">Hacking Club</summary>
+                        <p>Hacking Club: Welcome to the Hacking Club, where technology meets creativity! Our club is a haven for individuals passionate about ethical hacking and cybersecurity. We explore a wide range of topics, including penetration testing, network security, cryptography, and digital forensics.
+
+                            Members participate in hands-on workshops, engage in collaborative projects, and attend guest lectures from industry professionals. We aim to empower each member with the knowledge and skills necessary to tackle real-world cybersecurity challenges. Whether you're a beginner eager to learn or an experienced hacker wanting to share your expertise, there's a place for you here.
+                            
+                            Join us for exciting competitions, hackathons, and community outreach events, where we not only sharpen our skills but also promote cybersecurity awareness on campus. Together, we strive to create a safer digital environment and encourage responsible hacking practices.</p>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary class="club-button">Cooking Club</summary>
+                        <p>Cooking Club: Welcome to the Cooking Club, where culinary creativity and passion come together! Our club is designed for anyone who loves to cook, whether you’re a novice in the kitchen or an experienced chef. We believe that cooking is not just about preparing meals, but also about sharing culture, traditions, and flavors.
+
+                            Each month, we explore different cuisines and cooking techniques through hands-on workshops and cooking challenges. Members have the opportunity to learn new recipes, experiment with ingredients, and enhance their culinary skills in a fun and supportive environment. We also host themed cooking nights, where everyone brings a dish to share, allowing us to savor a variety of flavors from around the world.
+                            
+                            In addition to cooking, we discuss nutrition, meal planning, and food sustainability, fostering a deeper understanding of our food choices. Join us for outings to local farmers' markets, cooking classes, and food festivals, as we celebrate our love for food and the joy of cooking together. Whether you're looking to refine your skills or simply enjoy good food and company, the Cooking Club is the perfect place for you!</p>
+                </li>
+                <li>
+                    <details>
+                        <summary class="club-button">Books Club</summary>
+                        <p>Book Club: Welcome to the Book Club, where literature comes alive! Our club is a sanctuary for readers of all genres, offering a space to delve into stories, ideas, and perspectives that enrich our understanding of the world. We meet regularly to discuss a curated selection of books, ranging from classics to contemporary works, fiction to non-fiction.
+
+                            Each month, members vote on the next book to read, fostering a sense of community and shared exploration. Our discussions are lively and inclusive, encouraging everyone to share their thoughts, interpretations, and favorite quotes. We also host author events, where we invite writers to share their journeys and insights into the creative process.
+                            
+                            Beyond discussions, we organize themed reading challenges, book swaps, and outings to local bookstores and literary festivals, celebrating the joy of reading in various forms. Whether you’re a voracious reader or someone looking to rekindle your love for books, the Book Club offers a warm and welcoming environment. Join us as we embark on literary adventures, expand our horizons, and cultivate friendships through our shared passion for reading!</p>
+                    </details>
+                </li>
+            </ul>
+        </section>
+
+        <section id="chat">
+            <h2>Chat Box</h2>
+            <div id="chat-box">
+                <div id="messages"></div>
+                <input type="text" id="chat-input" placeholder="Type a message...">
+                <button id="send-btn">Send</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Campus Community</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('send-btn').addEventListener('click', function() {
+            const messageInput = document.getElementById('chat-input');
+            const messageText = messageInput.value;
+            if (messageText.trim() !== '') {
+                const messageElement = document.createElement('p');
+                messageElement.textContent = messageText;
+                document.getElementById('messages').appendChild(messageElement);
+                messageInput.value = '';
+            }
+        });
+    </script>
+</body>
+</html>
